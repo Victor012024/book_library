@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+  background-color: cadetblue;
+}
+
+.header {
+  /* background-color: yellowgreen; */
+  text-align: center;
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 25px;
+  border-radius: 0px 40px 0px 40px;
+}
+
+.header h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 3px 4px  rgba(198, 26, 26, 0.4)
+}
+
+.welcome-message {
+  width: 100%;
+  position: relative;
+}
+
+.welcome-message p {
+  position: absolute;
+  width: 20%;
+  padding: 70px;
+  top: 0;
+  left: 0;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+
+.welcome-message::before {
+  position: absolute;
+  left: 20px;
+  content: "";
+  width: 400px;
+  height: 300px;
+  background-color: goldenrod;
+  z-index: -1;
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 3% 50% 50% 50%;
+}
+
+form {
+  margin-top: 100px;
+  margin-left: 35%;
+  justify-content: center;
+  width: 30%;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.30); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 1.25rem;
+}
+
+form .form-control {
+  border-radius: 1.25rem;
+}
+
+form button {
+  margin-left: 28%;
+  padding: 35px;
+  width: 200px;
+}
+
+form p {
+  font-weight: bold;
+}
+form h6{
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.mb-3 {
+  width: 15%;
+  float: right;
+  margin-top: -100px;
+  margin-right: 130px;
+}
+
+#real {
+  border: 1px solid gray;
+  width: 99%;
+  border-radius: .95rem;
+  height: fit-content;
+  background-color: white;
+  margin-right: 150px;
+  margin-top: 10px;
+  padding: 20px;
+  text-wrap: nowrap;
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 430px) {
+  body {
+    max-width: 100%;
+  }
+
+  .welcome-message {
+    position: relative;
+    width: 100%;
+  }
+  
+  .welcome-message::before {
+    width: 300px;
+    z-index: -1;
+  }
+
+  .welcome-message p {
+    position: absolute;
+    display: none;
+    text-wrap: nowrap;
+  }
+
+  form {
+    width: 90%;
+    margin: -140px auto;
+    height: 400px;
+  }
+
+  form button {
+    margin-left: 60px;
+    margin-top: -300px;
+  }
+
+   .mb-3 {
+    position: relative;
+    margin: 90px auto;
+    margin-right: 60px;
+    width: 300px;
+    z-index: 1;
+  } 
+  
+  #real {
+    position: absolute;
+    top: 100%;
+    left: -1%;
+    width: 300px;
+    height: fit-content;
+    text-wrap: nowrap;
+    border-radius: .95rem;
+    font-weight: bold;
+  }
+}
