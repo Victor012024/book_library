@@ -111,6 +111,9 @@ form h6{
 
 
 @media screen and (max-width: 430px) {
+  .header {
+    font-family: sans-serif;
+  }
   body {
     max-width: 100%;
   }
